@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_58872_needit.validateEmailAddress</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>檢查電郵地址是否符合指定格式。</description>
+        <name>validateEmailAddress</name>
+        <script><![CDATA[function validateEmailAddress(emailStr){
+    // 用JavaScript coercion確保emailStr是純文字
+    emailStr = emailStr + '';
+    // 驗證emailStr是否符合電郵地址格式
+    // 如果emailStr符合格式，則結果為「true」；否則結果為「false」
+    if(emailStr.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+      return true;
+    }
+    else {
+     return false;
+    }
+  }]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-06 23:59:54</sys_created_on>
+        <sys_id>f3da16cc97b601106942747e6253afcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>validateEmailAddress</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_f3da16cc97b601106942747e6253afcd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-06 23:59:54</sys_updated_on>
+    </sys_script_include>
+</record_update>
